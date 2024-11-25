@@ -157,19 +157,16 @@ namespace SapXepVaTimKiem
         public static void Bai4()
         {
             int n = InputN();
-            string[] arrS;
+
             int[] arr = new int[n];
+
             if (n != 0)
             {
-                Console.WriteLine("\nNhap mang:");
-                arrS = Console.ReadLine().Split();
-                for (int i = 0; i < n; i++)
-                {
-                    arr[i] = int.Parse(arrS[i]);
-                }
+                InputArray(out arr, n);
                 BubbleSort(ref arr, 0, n - 1);
-
             }
+
+            Console.WriteLine("\nSo luong tung phan tu:");
             for (int i = 0; i < n; i++)
             {
                 int temp = 0;
