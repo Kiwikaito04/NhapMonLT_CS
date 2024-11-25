@@ -8,23 +8,31 @@ namespace SapXepVaTimKiem
 {
     public static class Init
     {
+
+        // Hàm nhập N (số lượng phần tử mảng)
         static int InputN()
         {
             Console.Write("\nNhap n: ");
             return int.Parse(Console.ReadLine());
         }
 
-        static void InputArray(out string[] arrS, ref int[] arrBubble, ref int[] arrInterchange, int n)
+        // Hàm nhập mảng
+        static void InputArray(out int[] arr, int n)
         {
             Console.WriteLine("\nNhap mang:");
-            arrS = Console.ReadLine().Split();
+
+            // Nhận chuỗi ký tự từ bàn phím
+            string[] arrS = Console.ReadLine().Split();
+
+            // Chuyển thành mảng int
+            arr = new int[n];
             for (int i = 0; i < n; i++)
             {
-                arrBubble[i] = int.Parse(arrS[i]);
-                arrInterchange[i] = int.Parse(arrS[i]);
+                arr[i] = int.Parse(arrS[i]);
             }
         }
 
+        // Hàm hoán vị
         static void Swap(ref int a, ref int b)
         {
             int temp = a;
@@ -32,58 +40,79 @@ namespace SapXepVaTimKiem
             b = temp;
         }
 
+        // Hàm in mảng
+        static void PrintArray(int[] arr, int n)
+        {
+            for (int i = 0; i < n; i++)
+                Console.Write($"{arr[i]} ");
+        }
+
+        //Hàm Buuble Sort
         static void BubbleSort(ref int[] arr, int l, int r)
         {
             for (int i = l; i <= r - 1; i++)
                 for (int j = l; j <= r - i - 1 + l; j++)
                     if (arr[j] > arr[j + 1])
                         Swap(ref arr[j], ref arr[j + 1]);
+
+            Console.WriteLine("\nBubble Sort:");
+            PrintArray(arr, arr.Length);
         }
 
+        // Hàm Interchange Sort
         static void InterchangeSort(ref int[] arr, int l, int r)
         {
             for (int i = l; i <= r - 1; i++)
                 for (int j = i + 1; j <= r; j++)
                     if (arr[i] > arr[j])
                         Swap(ref arr[i], ref arr[j]);
+
+            Console.WriteLine("\nInterchange Sort:");
+            PrintArray(arr, arr.Length);
         }
 
+        // Bài 1
         public static void Bai1()
         {
             int n = InputN();
-            string[] arrS;
+
+            int[] arr;
             int[] arrBubble = new int[n];
             int[] arrInterchange = new int[n];
+
             if (n != 0)
             {
-                InputArray(out arrS, ref arrBubble, ref arrInterchange, n);
-            }
-            BubbleSort(ref arrBubble, 0, n - 1);
-            Console.WriteLine("\nBubble Sort:");
-            for (int i = 0; i < n; i++)
-                Console.Write($"{arrBubble[i]} ");
-            Console.WriteLine();
+                InputArray(out arr, n);
 
+                // Sao chép mảng
+                for (int i = 0; i < n; i++)
+                {
+                    arrBubble[i] = arr[i];
+                    arrInterchange[i] = arr[i];
+                }
+            }
+
+            // Thực hiện sắp xếp
+            BubbleSort(ref arrBubble, 0, n - 1);
             InterchangeSort(ref arrInterchange, 0, n - 1);
-            Console.WriteLine("\nInterchange Sort:");
-            for (int i = 0; i < n; i++)
-                Console.Write($"{arrInterchange[i]} ");
-            Console.WriteLine();
         }
 
         public static void Bai2()
         {
             int n = InputN();
-            string[] arrS;
+
+            int[] arr;
             int[] arrBubble = new int[n];
             int[] arrInterchange = new int[n];
+
             int l = 0, r = 0;
+
             if (n != 0)
             {
-                InputArray(out arrS, ref arrBubble, ref arrInterchange, n);
-                Console.Write("\nNhap k = ");
-                l = int.Parse(Console.ReadLine());
+                InputArray(out arr, n);
                 Console.Write("\nNhap l = ");
+                l = int.Parse(Console.ReadLine());
+                Console.Write("\nNhap r = ");
                 r = int.Parse(Console.ReadLine());
             }
             BubbleSort(ref arrBubble, l, r);
