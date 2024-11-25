@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhapMonLT_CS", "NhapMonLT_C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapXepVaTimKiem", "SapXepVaTimKiem\SapXepVaTimKiem.csproj", "{835AB1B4-C4BA-40FF-A9EF-54E7609E2003}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CauTrucLap", "CauTrucLap\CauTrucLap.csproj", "{EA46622D-2132-4287-A36E-AAEDFD90ACFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{835AB1B4-C4BA-40FF-A9EF-54E7609E2003}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{835AB1B4-C4BA-40FF-A9EF-54E7609E2003}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{835AB1B4-C4BA-40FF-A9EF-54E7609E2003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA46622D-2132-4287-A36E-AAEDFD90ACFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA46622D-2132-4287-A36E-AAEDFD90ACFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA46622D-2132-4287-A36E-AAEDFD90ACFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA46622D-2132-4287-A36E-AAEDFD90ACFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
