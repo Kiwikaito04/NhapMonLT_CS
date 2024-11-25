@@ -110,22 +110,23 @@ namespace SapXepVaTimKiem
             if (n != 0)
             {
                 InputArray(out arr, n);
+
+                // Sao chép mảng
+                for (int i = 0; i < n; i++)
+                {
+                    arrBubble[i] = arr[i];
+                    arrInterchange[i] = arr[i];
+                }
+
                 Console.Write("\nNhap l = ");
                 l = int.Parse(Console.ReadLine());
                 Console.Write("\nNhap r = ");
                 r = int.Parse(Console.ReadLine());
             }
-            BubbleSort(ref arrBubble, l, r);
-            Console.WriteLine("\nBubble Sort:");
-            for (int i = 0; i < n; i++)
-                Console.Write($"{arrBubble[i]} ");
-            Console.WriteLine();
 
+            // Thực hiện sắp xếp
+            BubbleSort(ref arrBubble, l, r);
             InterchangeSort(ref arrInterchange, l, r);
-            Console.WriteLine("\nInterchange Sort:");
-            for (int i = 0; i < n; i++)
-                Console.Write($"{arrInterchange[i]} ");
-            Console.WriteLine();
         }
 
         static int FindKth(int n, int[] arr, int k)
