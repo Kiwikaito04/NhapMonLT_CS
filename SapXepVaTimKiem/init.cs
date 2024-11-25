@@ -45,6 +45,7 @@ namespace SapXepVaTimKiem
         {
             for (int i = 0; i < n; i++)
                 Console.Write($"{arr[i]} ");
+            Console.WriteLine();
         }
 
         //Hàm Buuble Sort
@@ -137,19 +138,18 @@ namespace SapXepVaTimKiem
         public static void Bai3()
         {
             int n = InputN();
-            string[] arrS;
+
             int[] arr = new int[n];
+
             if (n != 0)
             {
-                Console.WriteLine("\nNhap mang:");
-                arrS = Console.ReadLine().Split();
-                for (int i = 0; i < n; i++)
-                {
-                    arr[i] = int.Parse(arrS[i]);
-                }
+                InputArray(out arr, n);
+
                 BubbleSort(ref arr, 0, n - 1);
+
                 Console.Write("\nNhap k = ");
                 int k = int.Parse(Console.ReadLine());
+
                 Console.WriteLine($"\nPhan tu lon thu {k} trong mang la {FindKth(n, arr, k)}");
             }
         }
