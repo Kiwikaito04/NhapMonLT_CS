@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EA46622D-2132-4287-A36E-AAEDFD90ACFD}</ProjectGuid>
+    <ProjectGuid>{835AB1B4-C4BA-40FF-A9EF-54E7609E2003}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CauTrucLap</RootNamespace>
-    <AssemblyName>CauTrucLap</AssemblyName>
+    <RootNamespace>B7_SapXepVaTimKiem</RootNamespace>
+    <AssemblyName>B7_SapXepVaTimKiem</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Init.cs" />
+    <Compile Include="init.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Buổi 3 - Cấu trúc lặp.pdf" />
+    <None Include="Buổi 7 - Bài toán sắp xếp và tìm kiếm.pdf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

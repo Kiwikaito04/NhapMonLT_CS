@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CauTrucLuaChon
+namespace B2_CauTrucLuaChon
 {
     internal static class Init
     {
